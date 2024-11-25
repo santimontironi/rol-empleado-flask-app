@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugerencias</title>
+    <link rel="icon" href="/static/img/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/misSugerencias.css')}}">
+</head>
+<body>
+    
+    <div class="contenedor">
+        <header>
+            <a class="btn btn-light text-dark" href="sugerencias">Volver</a>
+        </header>
+        <div class="titulo">
+            <h1>Mis sugerencias</h1>
+        </div>
+        <div class="misSugerencias container">
+            {%if not sugerencias%}
+                <h1 class="titulo-no-hay-sugerencias">No hay sugerencias</h1>
+            {%else%}
+                {%for sugerencia in sugerencias%}
+                    <div class="sugerencia">
+                        <h1><strong>Asunto:</strong> {{sugerencia.titulo}}</h1>
+                        <h3><strong>Estado:</strong> {{sugerencia.estado}}</h3>
+                        <p><strong>Mi sugerencia:</strong> {{sugerencia.sugerencia}}</p>
+                        <span><strong>Fecha de envío:</strong> {{sugerencia.fecha}}</span>
+                        <h2>
+                            <strong>Respuesta:</strong> 
+                            {%if not sugerencia.respuesta%} 
+                                No hay respuesta aún
+                            {%else%}
+                                {{sugerencia.respuesta}} 
+                            {%endif%}
+                        </h2>
+                    </div>
+                {%endfor%}
+            {%endif%}
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

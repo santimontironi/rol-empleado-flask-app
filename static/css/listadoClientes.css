@@ -1,0 +1,110 @@
+body{
+    background: url(../img/fondo-titulo-listado.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header{
+    padding: 20px;
+    background: url(../img/fondo-titulo-listado.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.table{
+    margin: auto;
+    width: 1200px;
+    margin-top: 35px;
+}
+
+.table td{
+    min-height: 100px;
+}
+
+.busqueda{
+    width: 950px;
+}
+
+.limpiarBusqueda{
+    margin-left: 14px;
+}
+
+.formulario-operaciones{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+
+@media (max-width:800px){
+    body{
+        max-width: 100%;
+        min-height: 100vh;
+    }
+    header{
+        width: 100%;
+    }
+    header h1{
+        font-size: 25px;
+        margin-left: 20px;
+    }
+    .volver{
+        padding: 8px;
+        width: 100px;
+    }
+    .formulario-busqueda{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+    }
+    .table{
+        max-width: 650px;
+    }
+    .busqueda{
+        width: 240px;
+    }
+    .buscar{
+        padding: 5px;
+        width: 120px;
+    }
+    .table td{
+        min-height: 150px;
+    }
+}
+
+@media (min-width:810px) and (max-width:1200px){
+    body{
+        min-height: 100vh;
+        max-width: 100%;
+    }
+    header h1{
+        font-size: 45px;
+    }
+    header .volver{
+        font-size: 25px;
+    }
+    header .agregar{
+        font-size: 18px;
+    }
+    .formulario-busqueda{
+        margin: auto;
+        width: 700px;
+        display: flex;
+        gap: 10px;
+    }
+    .formulario-busqueda .busqueda{
+        font-size: 27px;
+    }
+    .table{
+        width: 650px;
+        font-size: 25px;
+    }
+    .table td{
+        min-height: 210px;
+    }
+    input[type="submit"]{
+        font-size: 22px;
+        width: 120px;
+    }
+}

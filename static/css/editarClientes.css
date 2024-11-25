@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    user-select: none;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.50)),url(../img/fondo-editar-clientes.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto Mono';
+}
+
+form{
+    width: 500px;
+}
+
+form input[type="text"]{
+    width: 360px;
+}
+
+@media(max-width:800px){
+    form{
+        width: 350px;
+        margin-top: 30px;
+    }
+}
+
+@media (min-width:810px) and (max-width:1200px){
+    h1{
+        font-size: 60px;
+    }
+    form{
+        margin-top: 70px;
+        width: 550px;
+    }
+    form input[type="text"]{
+        width: 420px;
+        font-size: 25px;
+    }
+    form textarea{
+        font-size: 65px;
+    }
+}

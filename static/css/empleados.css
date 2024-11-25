@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+body{
+    height: 100vh;
+    width: 100%;
+    font-family: "Raleway", sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.20),rgba(0,0,0,0.85)),url(/static/img/menuEmpleados.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+}
+
+header{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    height: 50px;
+    width: 200px;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    border-radius: 30px;
+    background-color: #d9e40b;
+}
+
+.bienvenida{
+    color: #EEFAC7;
+    font-family: "Roboto Mono", monospace;
+    font-size: 38px;
+    position: absolute;
+    top: 50px;
+}
+
+.menuEmprendimiento{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 180px;
+    width: 1000px;
+    height: 360px;
+    border: solid 1px #d9e40b;
+    padding: 20px;
+    gap: 30px;
+}
+
+.hidden{
+    opacity: 0;
+    transition: 1s;
+}
+
+.mostrar{
+    opacity: 1;
+    animation: scroll .8s ease-in-out;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #0b073b;
+    width: 270px;
+    height: 250px;
+    padding: 10px;
+    color: #d9e40b;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.tarjeta:hover{
+    background-color: #18099d;
+    transform: scale(1.1);
+    transition: .7s;
+    box-shadow: 20px 3px 25px #000000;
+}
+
+.tarjeta h1{
+    font-size: 20px;
+}
+
+.tarjeta i{
+    font-size: 50px;
+    color: white;
+}
+
+.tarjeta p{
+    color: white;
+    margin-top: 8px;
+}
+
+.tarjeta a{
+    text-decoration: none;
+    position: absolute;
+    bottom: -50px;
+    left: 30px;
+    right: 30px;
+    border: none;
+    font-weight: bold;
+    background-color: #d9e40b;
+    color: black;
+    visibility: hidden;
+}
+
+.tarjeta:hover a{
+    visibility: visible;
+    bottom: 10px;
+    transition: .8s;
+}
+
+@media (max-width:800px){
+    body{
+        width: 100%;
+        height: 150vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bienvenida{
+        text-align: center;   
+        margin-top: 25px;
+    }
+    .menuEmprendimiento{
+        width: 500px;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .tarjeta{
+        width: 360px;
+        height: 320px;
+    }
+}
+
+@media (min-width:810px) and (max-width:1200px){
+    .bienvenida{
+        font-size: 50px;
+        top: 80px;
+    }
+    header a{
+        padding: 15px;
+        font-size: 22px;
+    }
+    .menuEmprendimiento{
+        flex-direction: column;
+        height: auto;
+        width: 720px;
+    }
+    .tarjeta{
+        width: 430px;
+        height: 265px;
+    }
+    .tarjeta h1{
+        font-size: 35px;
+    }
+    .tarjeta i{
+        font-size: 65px;
+    }
+    .tarjeta p{
+        font-size: 21px;
+    }
+}

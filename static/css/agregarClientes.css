@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    user-select: none;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.50)),url(/static/img/agregarClientes.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+header{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    height: 50px;
+    width: 200px;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #d9e40b;
+    font-size: 18px;
+}
+
+.titulo h1{
+    font-size: 40px;
+    padding: 8px;
+}
+
+form{
+    width: 600px;
+}
+
+textarea{
+    width: 600px;
+    height: 185px;
+    resize: none;
+}
+
+.mensaje{
+    font-size: 16px;
+    padding: 3px;
+    border-radius: 30px;
+    width: 250px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.mensajeEnlace{
+    font-size: 15px;
+    padding: 10px;
+}
+
+@media (max-width:800px){
+    body{
+        height: 145vh;
+        max-width: 100%;
+        gap: 0px;
+    }
+    .titulo{
+        margin-top: 50%;
+    }
+    .titulo h1{
+        font-size: 37px;
+        padding: 6px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 60%;
+        margin-top: 40px;
+    }
+    input[type="text"]{
+        width: 260px;
+    }
+    input[type="email"]{
+        width: 260px;
+    }
+    input[type="submit"]{
+        width: 250px;
+    }
+    form textarea{
+        resize: none;
+        width: 260px;
+        height: 200px;
+    }
+    .botonMasMensaje{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width:810px) and (max-width:1200px){
+    form input[type="text"]{
+        font-size: 25px;
+    }
+    form input[type="email"]{
+        font-size: 25px;
+    }
+    form textarea{
+        resize: none;
+        padding: 10px;
+        font-size: 20px;
+        width: 600px;
+        height: 200px;
+    }
+}

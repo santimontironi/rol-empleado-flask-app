@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+.contenedor{
+    max-width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.20)),url(../img/fondo-sugerencias.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Roboto Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+header{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.titulo-parrafo{
+    width: 100%;
+    height: 230px;
+    color: #fff;
+    font-family: 'Black Ops One';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titulo-parrafo h1{
+    font-size: 65px;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 200px;
+    height: 140px;
+    background: linear-gradient(#0cb44c,#087833);
+    padding: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.boton i{
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.boton span{
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.boton:hover{
+    transition: .8s;
+    background: linear-gradient(#217fe9,#2443c2);
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+@media (max-width:800px){
+    .contenedor{
+        height: 110vh;
+    }
+    .titulo-parrafo{
+        text-align: center;
+        margin-top: 60px;
+    }
+    .titulo-parrafo h1{
+        font-size: 38px;
+    }
+    .botones{
+        flex-direction: column;
+    }
+}
+
+@media (min-width:810px) and (max-width:1200px){
+    .titulo-parrafo{
+        height: 390px;
+        text-align: center;
+    }
+    .titulo-parrafo h1{
+        font-size: 60px;
+    }
+    .titulo-parrafo p{
+        font-size: 25px;
+        max-width: 720px;
+    }
+    .botones{
+        flex-direction: column;
+    }
+    .boton{
+        width: 400px;
+        height: 250px;
+    }
+    .boton i{
+        font-size: 75px;
+    }
+    .boton span{
+        font-size: 30px;
+    }
+}
