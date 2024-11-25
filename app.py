@@ -4,6 +4,7 @@ from models.bd import inicializar_bd
 from models.mail import configurar_mail
 from flask_mail import Message,Mail
 from datetime import datetime
+from dotenv import load_dotenv
 import random
 from werkzeug.security import generate_password_hash, check_password_hash #libreria para el hash de claves
 import re # proporciona herramientas para trabajar con expresiones regulares. Las expresiones regulares son una poderosa herramienta para buscar, comparar y manipular cadenas de texto según patrones específicos.
@@ -11,6 +12,8 @@ import re # proporciona herramientas para trabajar con expresiones regulares. La
 #SE GENERA UNA CLAVE DE FLASK Y EL ENTORNO DE TRABAJO DE LA APP.
 app = Flask(__name__)
 app.secret_key = "claveSecreta"
+
+load_dotenv()
 
 #INICIALIZACION DE LA BD
 mysql = inicializar_bd(app)
